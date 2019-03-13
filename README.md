@@ -1,5 +1,6 @@
 # Lecteur RSS
 
-Ce Lecteur RSS a été créé dans un but pédagogique. Les technologies suivantes ot été utilisées : HTML/CSS, JS (jQuery, Ajax) et PHP.
+Ce Lecteur RSS a été créé dans un but pédagogique. 
+Les technologies utilisées pour son développement sont : HTML/CSS, JS (jQuery, Ajax) et PHP.
 
-Un fichier "config.ini" permet de configurer le flux RSS par défaut sans toucher au code.
+À noter qu'un fichier "config.ini" permet de configurer le flux RSS par défaut, sans toucher au code.
