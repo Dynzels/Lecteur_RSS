@@ -23,7 +23,7 @@ var app = {
             dataType: 'html', // On désire recevoir du HTML
 
             // Si la requête abouti
-            success: function(data) {
+            done: function(data) {
                 // On actualise le DIV avec l'ID "list_news"
                 $('#list_news').html(data);
                 console.log('Actualité affichée avec succès !');

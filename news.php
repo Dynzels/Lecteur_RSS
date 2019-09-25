@@ -41,14 +41,15 @@ catch (\Exception $e) {
     die('<p id="error">Flux RSS non conforme.</p>');
 }
 ?>
+<p class=""><span>Liste des dernières news du flux suivant :</span> <?= isset($rss_convert->channel->title) ? $rss_convert->channel->title : ''; ?></p>
 <!-- Nom du flux RSS -->
-<p id="title_flux"><span>Liste des dernières news du flux suivant :</span> <?= isset($rss_convert->channel->title) ? $rss_convert->channel->title : ''; ?></p>
 <?php for ($i=0; $i < $nbr = $nbr_news > $count ? $count : $nbr_news ; $i++) { ?>
-    <article class="news">
-        <h2 class="news__title"><?= $rss[$i]->title; ?></h2>
-        <small><?= $rss[$i]->pubDate; ?></small>
-        <img src="<?= $rss[$i]->image->url; ?>" alt="<?= $rss[$i]->image->title; ?>">
-        <p class="news__description"><?= $rss[$i]->description; ?></p>
-        <p><a href="<?= $rss[$i]->link; ?>">Lire la news</a></p>
+    <article class="card">
+        <img src="<?= $rss[$i]->image->url; ?>" class="card-img-top" alt="<?= $rss[$i]->image->title; ?>">
+        <div class="card-body">
+            <h2 class="card-title"><?= $rss[$i]->title; ?></h2>
+            <p class="card-text"><?= $rss[$i]->description; ?></p>
+            <a href="<?= $rss[$i]->link; ?>" class="btn btn-primary">Lire la news</a>
+        </div>
     </article>
 <?php } ?>
