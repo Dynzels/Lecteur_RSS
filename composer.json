@@ -1,0 +1,12 @@
+{
+    "name": "dynzels/lecteur_rss",
+    "authors": [
+        {
+            "name": "Dynzels",
+            "email": "dynzels@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^5.1"
+    }
+}
