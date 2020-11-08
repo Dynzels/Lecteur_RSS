@@ -42,8 +42,7 @@ catch (\Exception $e) {
 ?>
 <p class=""><span>Liste des dernières news du flux suivant :</span> <?= isset($rss_convert->channel->title) ? $rss_convert->channel->title : ''; ?></p>
 <!-- Nom du flux RSS -->
-
-<?php for ($i=0; $i < $nbr_news ; $i++) { ?>
+<?php for ($i=0; $i < $nbr = $nbr_news > $count ? $count : $nbr_news ; $i++) { ?>
     <article class="card">
         <img src="<?= $rss[$i]->image->url; ?>" class="card-img-top" alt="<?= $rss[$i]->image->title; ?>">
         <div class="card-body">
